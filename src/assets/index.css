@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-background {
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.notification {
+  max-width: 720px;
+}
+
+.bg-notification {
+  background-color:#e5e5e5;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.flex{
+  display: flex;
+}
+
+.grow {
+  flex-grow: 1;
+  margin: 20px;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.col-auto {
+  flex-basis: auto;
+}
+.col-auto h2 {
+  text-align: center;
+}
+.col-auto span {
+  display: block;
+  text-align: center;
+}
+.col {
+  flex-basis: 100%;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.align-self {
+  align-self: center;
+}
+
+.bg-blue {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 74, 160, 1);
+  position: absolute;
+  z-index: 2;
+  opacity: .7;
+}
+
+.btn-blue {
+  padding: 10px 20px;
+  min-width: 80px;
+  color: white;
+  background-color: #007bc1;
+  border: none;
+  border-radius: 2px;
+}
+
+.btn-transparent {
+  background: transparent;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding: 15px 40px;
+  margin-top: 10px;
+  border: 2px solid white;
+}
+.btn-transparent:hover {
+  background: white;
+  color: blue;
+}
