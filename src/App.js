@@ -21,10 +21,15 @@ function App() {
   
   // eslint-disable-next-line no-unused-vars
   function removeNewsletter() {
-    if (window.pageYOffset >= 3) {
+    if (window.pageYOffset >= 150) {
       const elem = document.getElementById('newsletter');
       elem.style.display = 'block'
     }
+  }
+
+  function closeElem() {
+    const elem = document.getElementById('newsletter');
+    elem.style.display = 'none'
   }
 
   return (
@@ -53,7 +58,7 @@ function App() {
                 </a>
               </p>
             </div>
-            <div className="col-12 align-self">
+            <div className="col-12 align-self p-20">
               <button id="btn-notif" className="btn-blue" onClick={hideNotif}>
                 Got it!
               </button>
@@ -205,8 +210,8 @@ function App() {
                     Get latest updates in web technologies
                   </div>
                 </div>
-                <div className="col-auto">
-                  <FontAwesomeIcon icon={faTimes} style={{ color: 'white' }}/>
+                <div className="close">
+                  <FontAwesomeIcon icon={faTimes} style={{ color: 'white' }} onClick={closeElem}/>
                 </div>
               </div>
               <p>
@@ -215,11 +220,11 @@ function App() {
                 them all.
               </p>
             </div>
-            <div className="row justify-content-between">
-              <div className="col-auto p-10">
+            <div className="row justify-content-between align-items-center m-0">
+              <div className="col-lg mr-32 ml-20 mb-10">
                 <input className="input-email" placeholder="Email address" />
               </div>
-              <div className="col-auto p-10">
+              <div className="col-sm mr-20 ml-20">
                 <button className="btn-orange">
                   Count me in!
                 </button>
