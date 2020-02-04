@@ -69,9 +69,9 @@ function App() {
       <header className="header">
         <div className="header-background">
           <div className="bg-blue" />
-        </div>
         <img src={bgHeader} className="img-background" alt="logo" />
         <img src={logo} className="img-logo" alt="logo" />
+        </div>
         <div className="page-header">
           <h1 className="m-0">
             Hello! I'm Meru
