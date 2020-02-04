@@ -1,3 +1,6 @@
+$animation-timing-function: cubic-bezier(.4,0,.2,1);
+$animation-duration: 1s;
+
 .App {
   text-align: center;
 }
@@ -278,6 +281,7 @@
   position: sticky;
   transform-origin: top;
   transition:  all .2s linear;
+  /* animation: slideInUp 3s; */
   /* transition-delay: .2s; */
   top: 0;
   width: 100%;
@@ -309,9 +313,7 @@
 
 .newsletter-fixed-bottom {
   position: fixed;
-  transform-origin: bottom;
-  transition:  all .2s linear;
-  /* transition-delay: .2s; */
+  animation: slideInUp 3s;
   bottom: 0px;
   left: 0px;
   height: auto;
@@ -323,7 +325,7 @@
 .item{
   border: solid 1px grey;
   border-radius: 3px;
-  padding: 6px;
+  padding: 20px;
 }
 
 .close {
@@ -385,3 +387,27 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%); 
+  }
+  100% {
+    opacity: 1;
+    transform: none; 
+  } 
+}
+
+[data-animation] {
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+/* // Disable animation of the childs
+// Disable animation in yourself */
